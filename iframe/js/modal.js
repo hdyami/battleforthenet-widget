@@ -202,7 +202,7 @@ var animations = {
             // doc['action_comment'] = $("[name=action_comment]").val();
             doc['action_comment'] = $("JL-TBD").val();  // JL HACK
             doc['country'] = 'US';                      // JL HACK
-            doc['page'] = "internet_bftn_sept_10_nn";
+            doc['page'] = "internet_bftn_sept_10";
 
             $.ajax({
                 url: "https://act.freepress.net/rest/v1/action/",
