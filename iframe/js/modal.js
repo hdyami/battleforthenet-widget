@@ -202,9 +202,10 @@ var animations = {
             // doc['action_comment'] = $("[name=action_comment]").val();
             doc['action_comment'] = $("JL-TBD").val();  // JL HACK
             doc['country'] = 'US';                      // JL HACK
+            doc['page'] = "internet_bftn_sept_10_nn";
 
             $.ajax({
-                url: "https://api.battleforthenet.com/submit",
+                url: "https://act.freepress.net/rest/v1/action/",
                 // url: "http://debbie:3019/submit",    // JL TEST ~
                 type: "post",
                 dataType: "json",
