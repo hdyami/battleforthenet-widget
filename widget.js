@@ -26,8 +26,7 @@
 (function(){ // :)
 
 // Default URL for animation iframe. This gets overlay'ed over your page.
-var dfurl = 'https://fightforthefuture.github.io/battleforthenet-widget/iframe';
-
+var dfurl = 'http://s3.freepress.net.s3.amazonaws.com/outreach/bftn-widget/iframe';
 
 /**
 --------------------------------------------------------------------------------
@@ -57,11 +56,11 @@ if (typeof _bftn_options.delay == "undefined")
 
 // If set to true, we will log stuff to the console
 if (typeof _bftn_options.debug == "undefined")
-	_bftn_options.debug = false;
+	_bftn_options.debug = true;
 
 // Usually a cookie is used to only show the widget once. You can override here.
 if (typeof _bftn_options.always_show_widget == "undefined")
-	_bftn_options.always_show_widget = false;
+	_bftn_options.always_show_widget = true;
 
 /**
 --------------------------------------------------------------------------------
@@ -163,21 +162,21 @@ var _bftn_animations = {
 			// otherwise it will be fixed to the top / bottom
 			var minFloatWidth = this.options.width-1;
 
-			var css = '
+			var css = "\
 				#_bftn_iframe { \
-					position: fixed; '+pos+' \
-					width: '+this.options.width+'px; \
-					height: '+this.options.height+'px; \
+					position: fixed; "+pos+" \
+					width: "+this.options.width+"px; \
+					height: "+this.options.height+"px; \
 					z-index: 20000; \
 				} \
-				@media (max-width:'+minFloatWidth+'px) { \
+				@media (max-width:"+minFloatWidth+"px) { \
 					#_bftn_iframe { \
 						position: absolute; \
 						width: 100%; \
 						left: 0px; \
-						'+stripPos+': 0px; \
+						"+stripPos+": 0px; \
 					} \
-				}';
+				}";
 
 			_bftn_util.injectCSS('_bftn_iframe_css', css);
 
