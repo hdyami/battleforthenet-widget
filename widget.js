@@ -56,11 +56,11 @@ if (typeof _bftn_options.delay == "undefined")
 
 // If set to true, we will log stuff to the console
 if (typeof _bftn_options.debug == "undefined")
-	_bftn_options.debug = true;
+	_bftn_options.debug = false;
 
 // Usually a cookie is used to only show the widget once. You can override here.
 if (typeof _bftn_options.always_show_widget == "undefined")
-	_bftn_options.always_show_widget = true;
+	_bftn_options.always_show_widget = false;
 
 /**
 --------------------------------------------------------------------------------
