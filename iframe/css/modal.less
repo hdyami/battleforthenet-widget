@@ -129,13 +129,15 @@ body {
     box-shadow: 0px 0px 150px white;
 
     &.zoomedOut {
-        -ms-transition: all .75s ease-out;
         -o-transition: all .75s ease-out;
         -moz-transition: all .75s ease-out;
         -webkit-transition: all .75s ease-out;
         transition: all .75s ease-out;
 
         &.notIE {
+            -o-transform: scale(.6);
+            -moz-transform: scale(.6);
+            -webkit-transform: scale(.6);
             transform: scale(.6);
         }
 
